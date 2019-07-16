@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84264631-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<head>
+  <meta charset="UTF-8">
+  
+  <title>[MTE 203] 3D-Visualization</title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="Awn Duqoum">
+  
+  <link rel="shortcut icon" href="logo.ico">
+  
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  
+  <!-- Site Specific CSS-->
+  <link href="css/Grapher.css" rel="stylesheet">
+  
+  <!-- JQuery Specific CSS-->
+  <link rel="stylesheet" href="jquery-ui-1.12.0/jquery-ui.css">
+</head>
+
+<body onload="initalSetup()" >
+ 
+	<div class="container-fluid">
+		
+		<!-- Start of title bar  -->
+		<div class="row"  id="titleBar-wrapper">
+			<div class="col-md-1" id="titleBar-Menu">
+				<ul class="nav nav-pills">
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" > 
+							<p class="text-center" id="titleBar-menutitle"> Edit Plot <b class="caret"></b> </p>
+						</a>
+						<ul class="dropdown-menu" id="menu1">
+							<li><a id="titlebar-menu-erasePlots" href="#">Erase Plots</a></li>
+							<li><a id="titlebar-menu-editPlotTitle" href="#">Edit Title</a></li>
+							<li class="divider"></li>
+							<li><a id="titlebar-menu-editXAxisTitle" href="#">Edit X Axis Title</a></li>
+							<li><a id="titlebar-menu-editYAxisTitle" href="#">Edit Y Axis Title</a></li>
+							<li class="divider"></li>
+							<li><a id="titlebar-menu-exportData" href="#">Export Data</a></li>
+							<li><a id="titlebar-menu-exportPlots" href="#">Export Plots</a></li>
+							<li class="divider"></li>
+							<li><a id="titlebar-menu-toggleXSlider" href="#">Toggle Slider</a></li>
+							<li class="divider"></li>
+							<li><a id="titlebar-menu-toggleXSlider" href="http://awncreations.com/Grapher/data/TestData.csv">Get Sample Data</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<h3 class="col-md-11" id="titleBar-Title"> Visualization Toolkit</h3>
+		</div>
+		<!-- End of title bar  -->
+		
+		<!-- Start of main page content -->
+		<div class="row" id="mainpage-wrapper">
+			<div id="Side_bar" class="col-md-2" > 
+				<div class="row CurrentPlotsTitle">
+					<div class="col-md-6"> 
+						<h4 id="CurrentPlotsTitle"> Current Plots </h4>
+					</div>
+					<div class="col-md-6 AddPlot">
+						<button  type="button" id="AddPlotBtn"> Add Plot </button>
+					</div>
+				</div>
+				<div id="Plots"> 
+					<!-- Plot titles and removal control will go here-->
+				</div>
+			</div>
+			<div id="Graphdiv-wrapper" class="col-md-12">
+			  <div id="Graph">
+				<!-- Plotly will place the plotting area here -->
+			  </div>
+			</div>			
+		</div>
+
+		<!-- End of main page content -->
+		
+		<!-- Start of add plot model -->
+		<div id="mymodel" class="model">
+			<!-- model content -->
+			<div class="model-content">
+				<div class="model-header">
+					<span class="close">X</span>
+					<h2>Select Plot Options</h2>
+				</div>
+				<div class="model-body">
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>Step 1: Select Device</h3>
+								<select id="CameraType" onchange="displayTestIDs()"> 
+									<option value="Spectra">Spectra</option>
+									<option value="Vega" Selected>Vega</option>
+									<option value="Vicra">Vicra</option>
+									<option value="Optotrak">Optotrak</option>
+									<option value="Certus">Certus</option>
+									<option value="AAK">AAK</option>
+									<option value="Astra">Astra</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<h3>Step 2: Select Test</h3>
+								<select id="testID" onchange="displayHeaders()"> 
+									<!-- Where testID will be placed-->
+								</select>
+							</div>							
+						</div>
+						<br>
+						<div class="row" id="selectRow">
+							<div class="col-md-6">
+								<div id="avalibleTest" class="TestSelectDiv">
+									<h3>Step 3 : Pick Plots</h3>
+									<select class="TestSelect" id="avalibleTestSelect" size="35">
+									<!-- Where headers will be placed-->
+									</select>
+								</div>
+							</div>
+								
+								<!-- TODO remove need for hidden controls -->
+							<div style="Display:none"> 
+								<input type="button" id="keyleft" value=">>">
+								<input type="button" id="keyright" value="<<">
+							</div>
+								
+							<div class="col-md-6">
+								<div class="TestSelectDiv" id="plottingTest">
+									<h3>Selected Plots</h3>
+									<select class="TestSelect" id="plottingTestSelect" size="35">
+									</select>
+								</div>
+							</div>
+							<br>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<h3>Step 4 : Select Plotting Options</h3>
+						<input type="checkbox" class="PlotOptions" id="Checkbox_All"> Include failed and repeated characterizations </input>  <br>
+						<input type="checkbox" class="PlotOptions" id="DateLimit" checked> Limit data to current year's results </input> <br>
+						<input type="checkbox" class="PlotOptions" id="PlotByDate"> Plot by date </input> <br>
+						<input type="checkbox" class="PlotOptions" id="PullCustomDate"> Custom date range </input> <br>
+						<input type="checkbox" class="PlotOptions" id="CustomPlot"> <span title="For a custom 2D plot select 2 headers to plot, the first will be treated as the X and the second will be the Y if 3 headers are provided, the third will be the z axis"> Custom Plot <span> </input> <br>
+						<hr>
+						<div id="DateSelectionDiv">
+							<h4> Date Selection options </h4>
+							<input type="radio" name="selectionType" class="PlotOptions" id="dateByRange" checked> Select range </input><br>
+							<input type="radio" name="selectionType" class="PlotOptions" id="dateBefore" > Select all before date</input><br>
+							<input type="radio" name="selectionType" class="PlotOptions" id="dateAfter"  > Select all after date </input><br>
+							<input type="date" id="dateBeforInput" name="dateBefore"> 
+							<input type="date" id="dateAfterInput" name="dateAfter"> 
+							<hr>
+						</div>
+						<button class="add-plot-button" id="add-plot-button"type="button"> Add Plot </button> 
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- End of add plot model -->
+		
+		<!-- Start of histogram filtering --> 
+		<!-- TODO: Add functionality  --> 
+		<div id="PointsFiltermodel" class="model">
+			<!-- model content -->
+			<div class="model-content">
+				<div class="model-header">
+					<h2>Filter Points</h2>
+				</div>
+				<div class="model-body">
+					<!-- Body goes here -->
+				</div>
+			</div>
+		</div>
+		<!-- End of histogram filtering -->
+		
+	</div>
+	
+	<!-- Plotly.js -->
+	<script  type="text/javascript" src="js/plotly-latest.min.js"></script>
+</body>
+<!-- 
+	Brief : Required JQuery libraries
+	Src : https://jquery.com/
+	Version Tag : V 1.00.00
+-->
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="jquery-ui-1.12.0/jquery-ui.js"></script>
+
+<!-- 
+	Brief : Library containing all needed functions to export data
+	Src : https://github.com/eligrey/FileSaver.js/
+	Version Tag : V 1.00.00
+-->
+<script type="text/javascript" src="js/FileSaver.js"></script>
+
+<!-- 
+	Brief : Library containing all needed functions to compute regression models
+	Src : https://github.com/Tom-Alexander/regression-js
+	Version Tag : V 1.00.00
+-->
+<script type="text/javascript" src="js/regression.js"></script>
+
+<!-- 
+	Brief : Library containing all needed functions to compute the Savitzky Golay smoothing model for 1D data
+	Src : https://github.com/mljs/savitzky-golay-generalized
+	Version Tag : V 1.00.00
+-->
+<script type="text/javascript" src="js/Savitzky_Golay.js"></script>
+
+<!-- 
+	Brief : Library containing all site specific functions
+	Version Tag : V 1.00.00
+-->
+<script type="text/javascript" src="js/Grapher.js"></script>
+
+<!-- 
+	Brief : Library containing all needed functions to control plot selection  
+	Src : https://github.com/VoidCanvas/pair-select
+	Version Tag : V 1.00.00
+-->
+<script type="text/javascript" src="js/pair-select.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

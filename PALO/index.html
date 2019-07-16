@@ -1,0 +1,85 @@
+<!--
+
+https://cloud.google.com/maps-platform/
+https://console.cloud.google.com/google/maps-apis/apis/maps-backend.googleapis.com/quotas?project=fydp-1546908100277&duration=PT1H
+https://developers.google.com/maps/documentation/javascript/examples/marker-remove
+!-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      var _lat = 43.4708087;
+      var _long = -80.540703;
+      var markers = [];
+      var counter = 0;
+      var step = 0.000005;
+      var myTimer = setInterval(moveMarker, 1000);
+      
+      function addMarker()
+      {
+        
+        if( counter <= 10 )
+        {
+            _lat = _lat + step;
+        }
+        else if( counter <= 20)
+        {
+            _long = _long + step;
+        }
+        else
+        {
+           _lat = _lat - 10 * step;
+           _long = _long - 10 * step;
+           counter = 0; 
+        }
+        
+        counter = counter + 1; 
+        var marker = new google.maps.Marker({map: map, position: {lat: _lat, lng: _long}});
+        markers.push(marker)
+      }
+      
+      function removeAllMarkers()
+      {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(null);
+        }
+        markers = [];
+      }
+      
+      function moveMarker()
+      {
+         removeAllMarkers();
+         addMarker();
+      }
+      
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: _lat, lng: _long},
+          zoom: 20
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXCZQG3uwCmlkklHh545FvLmjBtOH0GrI&callback=initMap" async defer></script>
+  </body>
+</html>

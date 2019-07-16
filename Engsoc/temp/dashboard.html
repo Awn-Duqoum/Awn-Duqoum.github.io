@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Analytics Dashboard @ NDI</title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="Awn Duqoum">
+  
+  <link rel="shortcut icon" href="logo.ico">
+  
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  
+  <!-- JQuery Specific CSS-->
+  <link rel="stylesheet" href="jquery-ui-1.12.0/jquery-ui.css">
+  
+  <!-- Site Specific CSS-->
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<script  type="text/javascript" src="js/plotly-latest.min.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/Savitzky_Golay.js"></script>
+<script type="text/javascript" src="js/dashboard.js"></script>
+
+<body style="height:100%">
+	<div class="container-fluid">
+		<!-- Start of main page content -->
+		<div class="row" id="dashboard-row-wrapper">
+			<div class="col-md-4">
+			  <div id="Graph00">
+				<!-- Plotly will place the plotting area here -->
+				<script type="text/javascript">addPlot('Graph00','Spectra','Passive Extended Pyramid Volume RMS'); </script>
+				<script type="text/javascript">addPlot('Graph00','Spectra','Passive Extended Pyramid Volume 95%'); </script>
+			  </div>
+			</div>			
+			<div class="col-md-4">
+			  <div id="Graph01">
+				<!-- Plotly will place the plotting area here -->
+				<script type="text/javascript">addPlot('Graph01','Vicra','Passive Pyramid Volume RMS'); </script>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <div id="Graph02">
+				<!-- Plotly will place the plotting area here -->
+				<script type="text/javascript">addPlot('Graph02','Spectra',' AAK Result_0'); </script>
+			  </div>
+			</div>
+		</div>		
+		<div class="row" id="dashboard-row-wrapper">
+			<div class="col-md-4">
+			  <div id="Graph10">
+				<!-- Plotly will place the plotting area here -->
+				<script type="text/javascript">addPlot('Graph10','Spectra',' AAK Result_0'); </script>
+			  </div>
+			</div>			
+			<div class="col-md-4">
+			  <div id="Graph11">
+				<!-- Plotly will place the plotting area here -->
+				<script type="text/javascript">addPlot('Graph11','Spectra',' AAK Result_0'); </script>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <div id="Graph12">
+				<!-- Plotly will place the plotting area here -->
+				<script type="text/javascript">addPlot('Graph12','Vicra',' AAK Result_0'); </script>
+			  </div>
+			</div>
+		</div>		
+		</div>
+
+		<!-- End of main page content -->
+		
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

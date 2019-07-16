@@ -1,0 +1,18 @@
+#addBotPadding{
+	margin-bottom: 15px;
+}
+#addTopPadding{
+	margin-top: 25px;
+}
+.FedsExp{
+	padding-left: 15px;
+    padding-right: 15px;
+}
+.EngGovExp{
+	padding-left: 15px;
+    padding-right: 15px;
+}
+.JobTitle{
+	padding-left: 15px;
+    padding-right: 15px;
+}

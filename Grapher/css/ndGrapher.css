@@ -1,0 +1,362 @@
+.button {
+	height:50%;
+	width:7%;
+	background-color: transparent;
+	background-image: url(images/x.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float: right;
+	margin-top : 20px;
+	margin-bottom : 10px;
+	border: none;
+	}
+.Gear{
+	height:50%;
+	width:7%;
+	background-color: transparent;
+	background-image: url(images/gear.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float: right;
+	margin-top : 20px;
+	margin-bottom : 10px;
+	border: none;
+	}
+	
+.MAvg_button {
+	height:50%;
+	width:7%;
+	background-color: transparent;
+	background-image: url(images/MAvg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float: right;
+	margin-top : 20px;
+	margin-bottom : 10px;
+	border: none;
+}
+
+.PlotName{
+	margin-left : 2px;
+	margin-bottom : 0px;
+	margin-top : 10px;
+	float:left;
+	width:85%;
+}
+
+.CurrentPlotsTitle{
+	border-bottom:solid;
+	border-color:black;
+	margin-bottom:0px;
+	margin-right:0px;
+	height:5%;
+
+}
+.Plot{
+	height:5%;
+	width:100%;
+}
+
+#Plots{
+	height:90%;
+}
+
+.AddPlot{
+	padding:0px;
+	margin:0px;
+	height:100%;
+}
+
+#Side_bar{
+	padding:0px;
+	height: 100%;
+	border-right:solid;
+	border-color:black;
+}
+
+select:focus{
+	background-color:white;
+}
+
+.model-header .close {
+  margin-top: 10px;
+}
+
+#EditPlot{
+	height:100%;
+	width:100%;
+	background:none;
+	border:none;
+	float:right;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+/* ploty js custom css */
+
+.modebar--hover{
+	left:700px;
+	width:25%;
+}
+
+/* Drop down menu css */
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;	
+}
+
+.dropdown-menu-sidebar{
+	float:left;
+	left:100%;
+	top:auto;
+}
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}
+.dropdown-toggle{
+	margin:0px;
+	height:100%;
+	width:100%;
+}
+.dropdown{
+	padding:0px;
+	margin:0px;
+	height:100%;
+	width:100%;
+}
+.nav-pills{
+	padding:0px;
+	margin:0px;
+	height:100%;
+}
+
+/* Add plot dialogue box css */
+
+/* The model (background) */
+.model {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+/* model Content */
+.model-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+	height:100%;	
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+	opacity: 10; 
+	margin:10px;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.model-header {
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+}
+
+.model-body {
+	height:95%;
+	padding: 2px 16px;
+}
+
+.model-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.TestSelectDiv{
+	float:left; 
+	width:100%;
+}
+
+.TestSelect{
+	width:100%;
+	height:75%;
+	overflow-y:auto;
+}
+
+.Controls{
+	float:left;
+	margin-top:10px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+#CameraType, #testID{
+	width:100%;
+}
+
+#selectRow{
+	padding-bottom:10px;
+	margin-top:10px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.add-plot-button{
+	margin-top:12px;
+    width: 100%;
+}
+
+body{
+	height:100%;
+	width:100%;
+	position:fixed;
+}
+.container-fluid{
+	height:100%;
+}
+.container-fluid>.row {clear:both}
+
+#AddPlotBtn{
+	height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#CurrentPlotsTitle{
+    padding-top: 5px;
+    padding-left: 2px;	
+}
+
+.PlotName{
+	margin-top:25px;
+}
+
+.sideBarDivider{
+	margin-bottom:0px;
+}
+
+#DateSelectionDiv{
+	display:none;
+}
+
+#sideBarSelect
+{
+	margin-top:3px;
+	margin-bottom:3px;
+	margin-right:20px;
+	margin-left:20px;
+	width:75%;
+}
+
+#sideBarSpan
+{
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#sideBarSizeButton{
+	margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#titleBar-Title{
+	color:white;
+	float:left;
+	text-align:right;
+}
+
+#titleBar-Menu{
+	padding:0px;
+	margin:0px;
+	height:100%;
+}
+
+#Graph {
+	height: 100%;
+}
+
+#Graphdiv-wrapper{
+	height: 100%;
+	padding: 0px;
+}
+
+#titleBar-wrapper{
+	background-color: black; 
+	height:56px;
+}
+
+#titleBar-menutitle{
+	padding-top:8px;
+}
+
+#mainpage-wrapper{
+	height: 95%;
+}

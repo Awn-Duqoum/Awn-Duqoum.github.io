@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>University of Waterloo Engineering Orientation Week 2010</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="css/general_css.css">
+<!-- InstanceBeginEditable name="head" -->
+<script type="text/javascript" src="js/mootools.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var pageName = "schedule";
+function init()
+{
+	try {
+		var DToolTips = new Tips( $$( '.tt' ), {
+			initialize:function() {
+				this.fx = new Fx.Style( this.toolTip, 'opacity', {duration:250, wait:false} ).set( 0 );
+			},
+			onShow:function(toolTip) {
+				this.fx.start( 0.9 );
+			},
+			/*onHide:function(toolTip) {
+				this.fx.start( 0 );
+			},*/
+			fixed:false,
+			className:"tt",
+			showDelay:50,
+			hideDelay:0,
+			offsets:{x:20, y:5},
+			maxTitleChars:50
+		} );
+	} catch (e) {alert('error'); }
+}
+// ]]>
+</script>
+<style type="text/css">
+table.schedule {
+	width:790px;
+	font-size:10px;
+}
+table.schedule tr {
+	height:30px;
+}
+table.schedule tr td {
+	text-align:center;
+	vertical-align:middle;
+	/*background-color:#eeeeee;
+	border:1px solid #0f0;*/
+	padding:0px 5px;
+	cursor:pointer;
+	cursor:hand;
+}
+table.schedule tr td.left {
+	text-align:left;
+	font-weight:bold;
+}
+.bg-grey { background-color:#c3c3c3!important; }
+.bg-peach { background-color:#75E7FF!important; color: #000!important; }
+.bg-purple { background-color:#592D87!important; }
+.bg-pink { background-color:#ff9bca!important; color: #000!important; }
+.bg-green { background-color:#00b050!important; }
+.bg-black { background-color:#D4AF37!important; }
+a.tt {
+	text-decoration:underline;
+}
+.tt-tip {
+	color:#000000;
+	background-color:#F1F1F1;
+	border:2px solid #0099FF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.tt-title {
+	font-weight:bold;
+	font-size:12px;
+	margin:0;
+	color:#000;
+	padding:8px 8px 4px;
+}
+.tt-text {
+	font-size:12px;
+	padding:4px 8px 8px;
+	max-width:300px;
+}
+a.tt-underlinegold {
+	color: #000!important; 
+	font-weight: bold;
+}
+a.tt-purple { color: #E2DEDE!important; }
+a.tt-pink { color: #000!important; }
+a.tt-peach { color: #000!important; }
+a.tt-grey { color: #000!important; }
+</style>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+// <![CDATA[
+function baseInit() {
+	document.getElementById("nav-" + pageName).className = "nav-current";
+	try { init(); } catch (e) { }
+}
+// ]]>
+</script>
+</head>
+<body onload="baseInit();">
+<div class="header center"></div>
+<div class="nav-top center">
+	<div>
+    	<!-- Total Width: 823px -->
+        <table class="nav-buttons" cellpadding="0" cellspacing="0">
+        <tr>
+        	<td class="not-button" style="width:47px;">&nbsp;</td>
+            <td id="nav-welcome" style="width:90px;" onclick="document.location.href='welcome.html';">Welcome</td>
+            <td id="nav-schedule" style="width:90px;" onclick="document.location.href='schedule.html';">Schedule</td>
+            <td id="nav-colours" style="width:90px;" onclick="document.location.href='colours.html';">Colours</td>
+            <td id="nav-hardhats" style="width:90px;" onclick="document.location.href='hardhats.html';">Hardhats</td>
+            <td id="nav-history" style="width:90px;" onclick="document.location.href='history.html';">History</td>
+            <td id="nav-faqs" style="width:90px;" onclick="document.location.href='faqs.html';">FAQs</td>
+            <td id="nav-links" style="width:90px;" onclick="document.location.href='links.html';">Links</td>
+            <td id="nav-sponsors" style="width:90px;" onclick="document.location.href='sponsors.html';">Sponsors</td>
+            <td class="not-button" style="width:47px;border-right:none;">&nbsp;</td>
+        </tr>
+        </table>
+    </div>
+</div>
+<div class="main-content center">
+	<div>
+   		<!-- InstanceBeginEditable name="content" -->
+        <h2 style="text-align:center;">Software Engineering Event Schedule</h2>
+        <br />
+        <table class="schedule">
+        <thead>
+        <tr>
+        	<th width="8%"></th>
+            <th width="11.5%">Sunday</th>
+            <th width="11.5%">Monday</th>
+            <th width="11.5%">Tuesday</th>
+            <th width="11.5%">Wednesday</th>
+            <th width="11.5%">Thursday</th>
+            <th width="11.5%">Friday</th>
+            <th width="11.5%">Saturday</th>    	
+            <th width="11.5%">Sunday</th>
+        </tr>
+        </thead>
+        <tbody>
+       	<tr>
+        	<td class="left">9:00 AM</td>
+            
+            <td rowspan="16" class="bg-peach">Move-In</td>
+            <td rowspan="16" class="bg-peach">Move-In</td>
+            <td rowspan="2" class="bg-purple"><a class="tt tt-purple" title="Opening Ceremonies::The introductory video is played at this time and it will highlight Orientation Week and what it has to offer you. The theme of the week and the respective colour groups will be officially announced which marks the start of the week's competitions. EngFOC, the organizers and your leaders of the week also introduce themselves at this time. You definitely do not want to miss this event!">Opening Ceremonies</a></td>
+            <td rowspan="16" class="bg-grey"><a class="tt tt-grey" title="ELPE::The only mandatory aspect of orientation week, the English Language Proficiency Program's Examination (http://elpp.uwaterloo.ca/elpe.html)">ELPE</a></td>
+            <td rowspan="6" class="bg-purple"><a class="tt tt-purple" title="Junkyard Wars::Our flagship event. Junkyard Wars is exactly what the name implies. Colour groups are challenged to solve problems using only recycled materials and scrap parts. Though not everything can be won with a hammer and saw; it'll take creativity, wit, ingenuity and plain-old smarts to win this competition!">Junkyard Wars</a></td>
+            <td rowspan="16" class="bg-peach"><a class="tt tt-peach" title="Jump Start Friday::Drop by any of our fantastic lectures and information sessions to learn about your first day of class, your academic opportunities, or hear an inspirational speaker motivate you.">Jump Start Friday</a></td>
+            <td rowspan="4">&nbsp;</td>
+            <td rowspan="3">&nbsp;</td>
+        </tr>
+		<tr>
+        	<td><!--9:30--></td>
+        </tr>
+        <tr>
+        	<td class="left">10:00</td>
+            <td rowspan="2" class="bg-pink"><a class="tt tt-pink" title="SE 101::">SE 101</a></td>
+        </tr>
+		<tr>
+        	<td><!--10:30--></td>
+            
+            <td rowspan="9" class="bg-purple"><a class="tt tt-purple" title="EngSoc Day::The UW Engineering Society (EngSoc) will play host to a fun afternoon of low-key activities. Come to POETS and see what the Engineering Society can do for you!">EngSoc Day</a></td>
+        </tr>
+        <tr>
+        	<td class="left">11:00</td>
+            
+            <td rowspan="2" class="bg-purple"><a class="tt tt-purple" title="Faculty Lunch::This is a great opportunity to meet upper-year students, faculty and staff in your department that you will be working with during your academic career. This mingling session is run by the faculty of Engineering and it always a great venue to answer questions you may have regarding your department of choice. You can also pick up several tips to help you succeed at the University from the get go!">Faculty Lunch</a></td>
+            
+            
+            
+            <td rowspan="10" class="bg-black"><a class="tt tt-underlinegold" title="Black & Gold Day (Rugby Game)::Cheer our Warriors Rugby team to Victory and watch the amazing half-time show at UW's Columbia Ice Fields athletics facility. Full of crazy surprises and school pride, don't miss it!">Black &amp;<br />
+          Gold Day<br />
+          (Rugby Game)</a></td>
+        </tr>
+        <tr>
+        	<td><!--11:30--></td>
+            
+            
+            
+            
+        </tr>
+        <tr>
+        	<td class="left">12:00 PM</td>
+            
+            <td rowspan="6" class="bg-purple"><a class="tt tt-purple" title="Earn Your Hardhat::Earning your Hardhat is one of the longest running traditions at the University of Waterloo. Dating back to its founding in 1957, the Hardhat is a prestigious item awarded to incoming Engineering students and is worn with pride by all. At this event, you will, as a team, complete several challenges that represent the Principles of Engineering that are vital to what the Hardhat represents. Again, you definitely do not want to miss your opportunity to collect the coveted Yellow Hardhat!">Earn Your Hardhat</a></td>
+            <td rowspan="2" class="bg-purple"><a class="tt tt-purple" title="Student Teams Lunch::Following immediately after Junkyard Wars, the Student Teams' Lunch is your opportunity to meet with upper-year students that are working on one of our many different student teams. This also gives you the opportunity to see what extracurricular activities are available to you and how to take part. The corporate sponsors of the week are also present, several of which hire co-op students and this is also a great chance to see what you can offer as a co-op! To top it off, a delicious barbeque is served!">Student Teams Lunch</a></td>
+        </tr>
+        <tr>
+        	<td><!--12:30--></td>
+            
+            
+            
+           
+        </tr>
+        <tr>
+        	<td class="left">1:00</td>
+			<td rowspan="3" class="bg-purple"><a class="tt tt-purple" title="Meet the TOOL::The oldest and most sacred of all traditions at the University of Waterloo. This is a must see event where you get to see the Engineering mascot. The TOOL: Live it. Love it.">Meet the TOOL</a></td>
+        </tr>
+        <tr>
+        	<td><!--1:30--></td>
+        </tr>
+       	<tr>
+        	<td class="left">2:00</td>
+        </tr>
+        <tr>
+        	<td><!--2:30--></td>
+            
+             <td rowspan="6" class="bg-pink"><a class="tt tt-pink" title="Earn Your Tie (Math)::Ready to get your very own pink tie? You need to earn it first! You and your team go through various activities to earn your tie (and points)!">Earn Your Tie (Math)</a></td>
+           	
+        </tr>
+        <tr>
+        	<td class="left">3:00</td>
+            
+            <td rowspan="2" class="bg-purple"><a class="tt tt-purple" title="Aerial Photo::Taking place immediately after earning your Hardhat, this is a time honoured tradition that portrays the theme of your Orientation Week. You can find this photo eternally mounted on the wall of POETS (well, at least for the five years of your undergraduate degree).">Aerial Photo</a></td>
+            
+            <td rowspan="10">&nbsp;</td>
+        </tr>
+        <tr>
+        	<td><!--3:30--></td>
+            
+        </tr>
+        <tr>
+        	<td class="left">4:00</td>
+            
+            <td rowspan="3" class="bg-purple"><a class="tt tt-purple" title="Single & Sexy::An original drama production of the University of Waterloo, this hilarious play deals with the challenges of living away from home – and out from under the parental eye – for the first time. Issues explored include sexual harassment, orientation, sexual assault, transmitted infections, pregnancy, love and succeeding in university. With several TV and music video farces, this play promises not only a humorous view of student life but also crucial information on how receiving any help that you may require.">Single &amp; Sexy</a><br />or<br /><a class="tt tt-purple" title="Service Safari::An Amazing event, Service Safari pits colour groups against each other, while teaching First-Year Students about the buildings and services that are available. There will be various checkpoints and at each checkpoint there will be an opportunity for teams to earn an item through a challenge unique to that checkpoint. The first team to get enough items wins!">Service Safari</a></td>
+            <td rowspan="8">&nbsp;</td>
+        </tr>
+        <tr>
+        	<td><!--4:30--></td>
+        </tr>
+        <tr>
+        	<td class="left">5:00</td>
+            
+            
+            <td rowspan="16">&nbsp;</td>
+            <td rowspan="12" class="bg-peach"><a class="tt tt-peach" title="Play Fair::A full-out night of games and fun with your residence floormates. Come out and meet some new friends!">Play Fair & Monday Madness</a></td>
+            <td rowspan="6">&nbsp;</td>
+            
+            <td rowspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+        	<td><!--5:30--></td>
+            
+            <td rowspan="3">&nbsp;</td>
+            <td rowspan="5">&nbsp;</td>
+        </tr>
+        <tr>
+        	<td class="left">6:00</td>
+        </tr>
+        <tr>
+        	<td><!--6:30--></td>
+	<td rowspan="1" class="bg-pink"><a class="tt tt-pink" title="Team Desserts (Math)::Enjoy delicious dessert with your team members while you discuss your winning strategy to pwn all the other teams during The Search for the Legendary Pink Tie!">Team Desserts (Math)</a></td>
+        </tr>
+        <tr>
+        	<td class="left">7:00</td>
+            
+            <td rowspan="12" class="bg-peach">Variety Night</td>
+            
+            <td rowspan="12" class="bg-pink"><a class="tt tt-pink" title="The Search for the Legendary Pink Tie! (Math)::You and your team are challenged to find items, figure out clues for trivia, and go for gold! This is the FINAL event where you're able to win points and have your team WIN THE WEEK!*<br /><br />* My team won, now what? You've earned your TIE GUARD WINGS! You get your very own badge and get to spend the night with the Elite Four!">The Search for the Legendary Pink Tie! (Math)</a></td>
+        </tr>
+        <tr>
+        	<td><!--7:30--></td>
+        </tr>
+        <tr>
+        	<td class="left">8:00</td>
+            
+                    	<td rowspan="10" class="bg-purple"><a class="tt tt-purple" title="Boars, Tools, and Ties::This variety night has something for everyone. As a joint event with Arts and Math, this is a great chance to meet people from different faculties. We don't want to ruin the surprise, but with past events such as Sumo and laser tag, how could you go wrong?">Boars, Tools, and Ties</a></td>   
+            
+        	<td rowspan="10" class="bg-peach"><a class="tt tt-peach" title="Monte Carlo::A night of class and elegance with something for everyone to enjoy. With past events such as the candle light bistro, swing lessons, and darkroom dance party, you will remember this night for the rest of your life.">Monte Carlo</a></td>
+            
+            <td rowspan="10" class="bg-peach"><a class="tt tt-peach" title="Saturday Night::Relax with friends, go on a night-time adventure, or dance the night away at the largest toga party anyone has ever heard of. The final night of Orientation programming closes with a bang!">Saturday Night</a></td>
+            
+            
+            <td rowspan="5" class="bg-purple"><a class="tt tt-purple" title="ComEng::Hosted by EngSoc, join in for a night of hilarious comedy by professional comedians as a way to relax before class the next morning. Meet your new upper year friends and watch the Orientation Week awards show where we announce the winners  of the week!">ComEng</a></td>
+        </tr>
+        <tr>
+        	<td><!--8:30--></td>
+            
+            
+
+        </tr>
+        <tr>
+        	<td class="left">9:00</td>
+        </tr>
+        <tr>
+        	<td><!--9:30--></td>
+        </tr>
+        <tr>
+        	<td class="left">10:00</td>
+        </tr>
+        <tr>
+        	<td><!--10:30--></td>
+            <td rowspan="5">&nbsp;</td>
+        </tr>
+        <tr>
+        	<td class="left">11:00</td>
+            <td rowspan="4">&nbsp;</td>
+            
+        </tr>
+        <tr>
+        	<td><!--11:30--></td>
+        </tr>
+        <tr>
+        	<td class="left">12:00 AM</td>
+        </tr>
+        <tr>
+        	<td><!--12:30--></td>
+        </tr>
+        </tbody>
+        </table>
+        <!-- InstanceEndEditable -->
+    </div>
+</div>
+<div class="nav-bottom center">
+	<a href="welcome.html">welcome</a> | 
+    <a href="schedule.html">schedule</a> | 
+    <a href="colours.html">colours</a> | 
+    <a href="hardhats.html">hardhats</a> | 
+    <a href="history.html">history</a> | 
+    <a href="faqs.html">faqs</a> | 
+    <a href="links.html">links</a> | 
+    <a href="sponsors.html">sponsors</a>
+</div>
+</body>
+<!-- InstanceEnd --></html>
